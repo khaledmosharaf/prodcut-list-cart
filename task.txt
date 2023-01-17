@@ -1,0 +1,13 @@
+Task for react dev:
+Create a product collection react app using this API https://fakestoreapi.com/products/
+The product layout should have a product image, title, price, and a button to add to cart
+Add a search bar to search products by title on top of the product list
+When user click on the add to cart button, the product should be added to the cart on the right side of the page
+User should be able to remove the product from the cart
+User can add maximum 4 products to the cart
+Video instruction: https://www.loom.com/share/c67515cf184b45eab35cffa60fb2e04e
+Upload the project on Netlify or Heroku and Send us the live link along with the source code
+Extra:
+User can't add the same product to the cart twice
+Add a button to clear the cart
+Add a button to choose a random product from the cart and show it below the cart
