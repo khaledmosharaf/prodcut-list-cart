@@ -37,18 +37,24 @@ const ProductWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   /* max-width: 300px; */
-  /* width: 100%; */
-  min-height: 200px;
-  max-height: 400px;
+  width: 100%;
+  min-height: 450px;
+  max-height: 500px;
 
   .product-image {
     display: flex;
-    justify-content: center;
+    flex-grow: 1;
     align-items: center;
+    justify-content: center;
     width: 100%;
-
+    height: 100%;
+    /* transform: translateY(50%); */
     img {
-      width: 140px;
+      /* margin: 50px 0px; */
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
