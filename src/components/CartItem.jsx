@@ -18,7 +18,7 @@ export default function CartItem({ data }) {
         className="img-wrapper delete-icon"
         onClick={() => dispatch(deleteFromCart(data.id))}
       >
-        <img src={DeleteIcon} alt="delete" />
+        <img src={DeleteIcon} alt="delete" className="delete" />
       </div>
     </CartItemWrapper>
   );
@@ -40,5 +40,9 @@ const CartItemWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .delete {
+    width: 30px;
+    height: 30px;
   }
 `;
