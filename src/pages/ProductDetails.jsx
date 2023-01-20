@@ -1,7 +1,7 @@
 import { Button } from 'components';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from 'reducers/cartReducer';
 import { setCurrentProduct } from 'reducers/productsReducer';
 import styled from 'styled-components';
@@ -21,7 +21,7 @@ export default function Product() {
       console.log('useEffect id', id);
       dispatch(setCurrentProduct(id));
     }
-  }, [id]);
+  }, [dispatch, id]);
 
   const { currentProduct } = useSelector((store) => store.productsReducer);
 
@@ -38,7 +38,6 @@ export default function Product() {
         <img
           src={LeftArrow}
           alt="go back"
-          width={50}
           className="left-arrow"
           onClick={() => navigateTo(-1)}
         />
@@ -48,12 +47,12 @@ export default function Product() {
             <div className="product-image-wrapper">
               <img src={product.image} alt={product.title} />
             </div>
-            <h4>{product.title}</h4>
-            <p>{product.description}</p>
-            <p>${product.price}</p>
+            <h2>{product.title}</h2>
+            <h3>{product.description}</h3>
+            <h4>${product.price}</h4>
             <div className="rating">
-              <p> {product.rating.count} ratings</p>
-              <p> {product.rating.rate}/5</p>
+              <h5> {product.rating.count} ratings</h5>
+              <h5> {product.rating.rate}/5 average </h5>
             </div>
             <Button onClick={() => dispatch(addToCart(product))}>
               Add to Cart
@@ -83,5 +82,9 @@ const ProductWrapper = styled.div`
 
   .product-details {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
   }
 `;

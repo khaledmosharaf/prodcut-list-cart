@@ -13,7 +13,7 @@ export default function Searchbar() {
 
   useEffect(() => {
     dispatch(setSearchResults(searchTerm));
-  }, [searchTerm]);
+  }, [dispatch, searchTerm]);
 
   return (
     <SearchbarWrapper>
@@ -31,7 +31,7 @@ const SearchbarWrapper = styled.div`
   display: flex;
   justify-content: center;
   input {
-    width: 50%;
+    width: 70%;
     height: 40px;
     color: #555;
     border-radius: 6px;

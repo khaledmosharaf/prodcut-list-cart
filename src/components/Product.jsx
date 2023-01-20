@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart } from 'reducers/cartReducer';
 import styled from 'styled-components';
-import Button from './Button';
+import { Button } from 'components';
 
 export default function Product({ data }) {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export default function Product({ data }) {
         <h4>${data.price}</h4>
         <div className="rating">
           <h5> {data.rating.count} ratings</h5>
-          <h5> {data.rating.rate}/5</h5>
+          <h5 className="average-ratng"> average: {data.rating.rate}/5</h5>
         </div>
         <div className="btn-group">
           <Button onClick={() => dispatch(addToCart(data))}>Add to Cart</Button>
@@ -62,6 +62,7 @@ const ProductWrapper = styled.div`
     justify-content: center;
     gap: 15px;
     align-self: flex-start;
+    color: #777;
   }
 
   .btn-group {

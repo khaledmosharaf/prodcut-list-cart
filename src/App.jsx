@@ -1,4 +1,4 @@
-import { Cart } from 'components';
+import { Cart, RandomProduct } from 'components';
 import { SharedLayout } from 'layouts';
 import { Error404, ProductDetails, ProductList } from 'pages';
 import { useEffect, useState } from 'react';
@@ -16,7 +16,7 @@ export default function App() {
     fetch('https://fakestoreapi.com/products/')
       .then((response) => response.json())
       .then((data) => dispatch(setProducts(data)));
-  }, []);
+  }, [dispatch]);
 
   let { products, searchResults } = useSelector(
     (store) => store.productsReducer
@@ -40,7 +40,18 @@ export default function App() {
     <AppWrapper>
       <BrowserRouter>
         <Routes>
-          <Route element={<SharedLayout sidebar={<Cart />} />}>
+          <Route
+            element={
+              <SharedLayout
+                sidebar={
+                  <>
+                    <Cart />
+                    <RandomProduct />
+                  </>
+                }
+              />
+            }
+          >
             <Route
               path="/"
               element={<ProductList products={productsToDisplay} />}

@@ -29,6 +29,10 @@ const NavbarWrapper = styled.nav`
   overflow: hidden;
   color: #eee;
 
+  h2 {
+    cursor: pointer;
+  }
+
   header {
     display: flex;
 

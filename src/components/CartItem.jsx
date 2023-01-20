@@ -33,7 +33,7 @@ const CartItemWrapper = styled.div`
   background-color: #fff;
 
   .product-image {
-    width: 100px;
+    width: 150px;
     /* height: 70px; */
   }
   .product-text {

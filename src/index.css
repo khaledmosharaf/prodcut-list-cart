@@ -33,6 +33,7 @@ img {
   width: 100%;
 }
 .left-arrow {
+  width: 50px;
   position: relative;
   left: 20px;
   top: 20px;
@@ -48,4 +49,10 @@ img {
 }
 .delete-icon :hover {
   cursor: pointer;
+}
+.is-sticky {
+  position: fixed;
+  top: 10px;
+  z-index: 999;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
