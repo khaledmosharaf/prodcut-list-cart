@@ -36,9 +36,10 @@ const ProductWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  width: 100%;
+  /* max-width: 300px; */
+  /* width: 100%; */
   min-height: 200px;
+  max-height: 400px;
 
   .product-image {
     display: flex;

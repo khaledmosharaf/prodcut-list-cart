@@ -51,7 +51,7 @@ const productsReducer = (state = initialState, { type, payload }) => {
             case -1:
               return false;
             case 0:
-              return false;
+              return true;
             default:
               return true;
           }
