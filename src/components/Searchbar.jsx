@@ -12,7 +12,15 @@ export default function Searchbar() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setSearchResults(searchTerm));
+    console.log('useEffect ran');
+    const timeout = setTimeout(() => {
+      dispatch(setSearchResults(searchTerm));
+    }, 500);
+
+    return () => {
+      console.log('clearTimeout ran');
+      clearTimeout(timeout);
+    };
   }, [dispatch, searchTerm]);
 
   return (
