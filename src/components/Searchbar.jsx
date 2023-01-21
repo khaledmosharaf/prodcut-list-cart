@@ -27,11 +27,12 @@ export default function Searchbar() {
   );
 }
 const SearchbarWrapper = styled.div`
-  margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+
   input {
-    width: 70%;
+    width: 100%;
     height: 40px;
     color: #555;
     border-radius: 6px;

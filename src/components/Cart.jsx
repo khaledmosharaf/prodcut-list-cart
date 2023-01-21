@@ -76,13 +76,17 @@ export default function Cart() {
   );
 }
 const CartWrapper = styled.div`
-  margin-right: 20px;
   padding: 20px;
   border: 1px solid #888;
-  height: 100%;
+  height: fit-content;
   margin-top: 80px;
   border-radius: 6px;
   font-size: 0.9rem;
+
+  @media (max-width: 767px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 
   nav {
     display: flex;

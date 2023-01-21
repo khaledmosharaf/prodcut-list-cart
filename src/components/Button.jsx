@@ -9,6 +9,7 @@ const Button = styled.button`
   font-weight: 700;
   border: 1px solid #777;
   width: ${(p) => (p.w100 ? '100%' : 'fit-content')};
+  height: fit-content;
 
   &:hover {
     color: #fff;

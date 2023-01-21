@@ -31,7 +31,6 @@ export default function RandomProduct({ data }) {
   );
 }
 const RandomProductWrapper = styled.div`
-  margin-right: 20px;
   padding: 20px;
   border: 1px solid #888;
   height: 100%;

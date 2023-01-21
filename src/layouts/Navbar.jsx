@@ -36,7 +36,7 @@ const NavbarWrapper = styled.nav`
   header {
     display: flex;
 
-    width: calc(100% - 320px);
+    width: 100%;
   }
 
   .links {
