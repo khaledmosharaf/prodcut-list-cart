@@ -37,6 +37,11 @@ const RandomProductWrapper = styled.div`
   margin-top: 20px;
   border-radius: 6px;
   font-size: 0.9rem;
+
+  @media (max-width: 767px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   .random-btn {
     margin: 20px 0 30px;
   }
